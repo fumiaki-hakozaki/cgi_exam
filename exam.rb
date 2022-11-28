@@ -12,7 +12,7 @@ server = WEBrick::HTTPServer.new({
 }
 
 
-server.mount('/exam',WEBrick::HTTPServlet::ERBHandler, 'exam.html.erb')
+server.mount('/',WEBrick::HTTPServlet::ERBHandler, 'exam.html.erb')
 server.mount('/goya.cgi', WEBrick::HTTPServlet::CGIHandler, 'goya.rb')
 server.mount('/goya1.cgi', WEBrick::HTTPServlet::CGIHandler, 'goya1.rb')
 server.start
